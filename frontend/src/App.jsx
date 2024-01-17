@@ -9,8 +9,8 @@ import Contact from './components/Contact';
 
 const App = () => {
   return (
-    <div className='bg-[url(./assets/Welcome_01.jpg)] bg-cover bg-left h-screen bg-no-repeat'>
-      <div className='lg:w-full h-full bg-sky-500/20 backdrop-brightness-75 grid'>
+    <div className='bg-[url(./assets/Welcome_01.jpg)] bg-cover bg-left font-nunito bg-no-repeat'>
+      <div className='lg:w-full h-full bg-sky-600/20 backdrop-brightness-50 backdrop-contrast-100 grid'>
     <Router>
       <Navbar />
       <Routes>
