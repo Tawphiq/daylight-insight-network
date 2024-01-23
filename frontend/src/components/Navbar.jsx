@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/daylight-logo.jpg'
 
@@ -31,8 +31,8 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const navbarBackground = isTopOfPage ? "bg-transparent" : "bg-sky-300"
-  const genericHamburgerLine = `h-1 w-10 my-1 rounded-full bg-sky-300 transition ease transform duration-300`;
+  const navbarBackground = isTopOfPage ? "bg-transparent" : "bg-sky-300 h-32"
+  const genericHamburgerLine = `h-1 w-10 my-1 rounded-full bg-amber-300 transition ease transform duration-300`;
 
   return (
     <nav className={`${navbarBackground} p-10 sticky top-0 z-50`}>
@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navbar */}
-        <div className={`${isLargeScreen ? 'md:flex items-center space-x-14 font-semibold text-xl border-2 border-sky-300 p-5' : 'hidden'}`}>
+        <div className={`${isLargeScreen ? 'md:flex items-center space-x-14 font-semibold p-5' : 'hidden'}`}>
           <NavLink to="/" className="text-white hover:text-gray-300">
             Home
           </NavLink>

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -6,23 +7,28 @@ import About from './components/About';
 import Events from './components/Events';
 import Services from './components/Services';
 import Contact from './components/Contact';
+import videobg from './assets/daylight-bg2.mp4'
 
 const App = () => {
   return (
-    <div className='bg-[url(./assets/Welcome_01.jpg)] bg-cover bg-left font-nunito bg-no-repeat'>
-      <div className='lg:w-full h-full bg-sky-600/20 backdrop-brightness-50 backdrop-contrast-100 grid'>
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events/>} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services/>} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
-    </div>
-    </div>
+    <>
+      <video
+        className='absolute object-cover w-full min-h-screen -z-10 '
+        src={videobg} autoPlay loop muted />
+      <div className='backdrop-brightness-50g bg-amber-300/20g pt-5 min-h-screen'>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <About />
+        </Router>
+      </div>
+    </>
   );
 };
 
