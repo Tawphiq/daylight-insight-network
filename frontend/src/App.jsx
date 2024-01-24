@@ -7,7 +7,7 @@ import About from './components/About';
 import Events from './components/Events';
 import Services from './components/Services';
 import Contact from './components/Contact';
-import videobg from './assets/daylight-bg2.mp4'
+import videobg from './assets/daylight-bg3.mp4'
 
 const App = () => {
   return (
