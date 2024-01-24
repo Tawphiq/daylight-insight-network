@@ -7,8 +7,8 @@ function About() {
   return (
     <div className="lg:grid lg:grid-cols-2 bg-sky-400 text-white p-10 lg:px-40 font-nunito text-lg">
       <div className='grid grid-cols-2 gap-2'>
-      <img src={about} alt="" className='rounded-lg' />
-      <img src={about1} alt="" className='mt-28 mb-5 rounded-lg' />
+      <img src={about1} alt="" className='rounded-lg' />
+      <img src={about} alt="" className='mt-28 mb-5 rounded-lg' />
       </div>
       <div className=''>
       <h1 className="text-4xl lg:6xl font-bold">About Us</h1>
