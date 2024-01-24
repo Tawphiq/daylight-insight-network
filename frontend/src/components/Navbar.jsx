@@ -31,8 +31,8 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const navbarBackground = isTopOfPage ? "bg-transparent" : "bg-sky-300 h-32"
-  const genericHamburgerLine = `h-1 w-10 my-1 rounded-full bg-amber-300 transition ease transform duration-300`;
+  const navbarBackground = isTopOfPage ? "bg-transparent" : "bg-sky-400 shadow-md h-32"
+  const genericHamburgerLine = `h-1 w-10 my-1 rounded-full bg-amber-400 transition ease transform duration-300`;
 
   return (
     <nav className={`${navbarBackground} p-10 sticky top-0 z-50`}>
