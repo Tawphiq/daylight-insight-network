@@ -1,8 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
+import Services from './Services'
+import About from './About'
+import Events from './Events'
 
 function Home() {
   return (
+        <>
         <div className='text-white mt-20 mb-20 lg:mb-52 grid justify-start p-5 lg:justify-center lg:px-40'>
           <h1 className=' text-4xl lg:text-5xl font-nunito font-extrabold lg:mt-0'>Daylight Insights Network</h1>
           <div className='grid mt-1 lg:mt-8'>
@@ -13,6 +17,10 @@ function Home() {
           </div>
           </div>
         </div>
+          <Services />
+          <About />
+          <Events />
+        </>
   )
 }
 
