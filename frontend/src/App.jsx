@@ -8,6 +8,7 @@ import Events from './components/Events';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import videobg from './assets/daylight-bg3.mp4'
+import EventDetail from './components/EventDetail';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/events/:id" element={<EventDetail />} />
           </Routes>
           <Services />
           <About />
