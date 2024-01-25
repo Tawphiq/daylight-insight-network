@@ -3,14 +3,14 @@
 
 const Services = () => {
   return (
-    <div className="container mx-auto myi-8 p-8 bg-gray-100">
-      <h1 className="text-4xl font-bold font-nunito mb-4 text-sky-400">Our Services</h1>
-      <div className="list-disc">
-        <p>Curated showcases for talents</p>
-        <p>Brand exposure for entrepreneurs</p>
-        <p>Platform for thought leaders with groundbreaking ideas</p>
-        <p>Networking opportunities for all</p>
-      </div>
+    <div className="container mx-auto my-8 p-8 bg-gray-100 font-nunito text-lg">
+      <h1 className="text-4xl font-bold mb-4">Our Services</h1>
+      <ul className="bullet-list  pl-4">
+        <li>Curated showcases for talents</li>
+        <li>Brand exposure for entrepreneurs</li>
+        <li>Platform for leaders with creative ideas</li>
+        <li>Networking opportunities for all</li>
+      </ul>
     </div>
   );
 };
