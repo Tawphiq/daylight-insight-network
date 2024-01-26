@@ -2,6 +2,35 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useParams } from 'react-router-dom';
+import winner1 from '../assets/westalents-winners/winner1.jpg'
+import winner2 from '../assets/westalents-winners/winner2.jpg'
+import winner3 from '../assets/westalents-winners/winner3.jpg'
+import winner4 from '../assets/westalents-winners/winner4.jpg'
+import winner5 from '../assets/westalents-winners/winner5.jpg'
+import winner6 from '../assets/westalents-winners/winner6.jpg'
+import winner7 from '../assets/westalents-winners/winner7.jpg'
+import winner8 from '../assets/westalents-winners/winner8.jpg'
+import winner9 from '../assets/westalents-winners/winner9.jpg'
+import winner10 from '../assets/westalents-winners/winner10.jpg'
+import winner11 from '../assets/westalents-winners/winner11.jpg'
+import winner12 from '../assets/westalents-winners/winner12.jpg'
+import winner13 from '../assets/westalents-winners/winner13.jpg'
+import winner14 from '../assets/westalents-winners/winner14.jpg'
+import winner15 from '../assets/westalents-winners/winner15.jpg'
+import winner16 from '../assets/westalents-winners/winner16.jpg'
+import winner17 from '../assets/westalents-winners/winner17.jpg'
+import winner18 from '../assets/westalents-winners/winner18.jpg'
+import winner19 from '../assets/westalents-winners/winner19.jpg'
+import winner20 from '../assets/westalents-winners/winner20.jpg'
+import winner21 from '../assets/westalents-winners/winner21.jpg'
+import winner22 from '../assets/westalents-winners/winner22.jpg'
+import winner23 from '../assets/westalents-winners/winner23.jpg'
+
+
+
+
+
+
 
 const EventDetail = () => {
   const { id } = useParams();
@@ -17,7 +46,9 @@ const EventDetail = () => {
       coverImage: 'past-event-1-cover.jpg',
       gallery: {
         guestsOfHonor: ['guest1.jpg', 'guest2.jpg'],
-        winners: ['winner1.jpg', 'winner2.jpg'],
+        winners: [winner1, winner2, winner3, winner4, winner5, winner6, winner7, winner8, winner9, winner10, winner11, winner12, winner13,
+            winner14, winner15, winner16, winner17, winner18, winner19, winner20, winner21, winner22, winner23
+        ],
       },
       mediaPartners: ['Media Partner 1', 'Media Partner 2'],
       sponsors: ['Sponsor 1', 'Sponsor 2'],
@@ -70,7 +101,7 @@ const EventDetail = () => {
   } = selectedEvent;
 
   return (
-    <div className="container mx-auto mt-8">
+    <div className="container mx-auto mt-8 font-nunito">
       <div className="bg-gray-100 p-4 rounded">
         <img src={coverImage} alt={eventName} className="w-full h-48 object-cover mb-4 rounded" />
         <h2 className="text-3xl font-bold mb-2">{eventName}</h2>
@@ -95,9 +126,9 @@ const EventDetail = () => {
           {/* Winners */}
           <div className="mt-4">
             <h4 className="text-lg font-semibold mb-2">Winners</h4>
-            <div className="flex">
+            <div className="grid grid-cols-3">
               {gallery.winners.map((image, index) => (
-                <img key={index} src={image} alt={`Winner ${index + 1}`} className="w-1/4 h-24 object-cover mr-2 rounded" />
+                <img key={index} src={image} alt={`Winner ${index + 1}`} className="h-24 object-cover mr-2 rounded" />
               ))}
             </div>
           </div>
