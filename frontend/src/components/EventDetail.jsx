@@ -126,9 +126,9 @@ const EventDetail = () => {
           {/* Winners */}
           <div className="mt-4">
             <h4 className="text-lg font-semibold mb-2">Winners</h4>
-            <div className="grid grid-cols-3">
+            <div className="grid grid-cols-2 gap-2">
               {gallery.winners.map((image, index) => (
-                <img key={index} src={image} alt={`Winner ${index + 1}`} className="h-24 object-cover mr-2 rounded" />
+                <img key={index} src={image} alt={`Winner ${index + 1}`} className="object-cover mr-2 rounded" />
               ))}
             </div>
           </div>
