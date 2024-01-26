@@ -2,6 +2,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useParams } from 'react-router-dom';
+import westalent from '../assets/westalent.jpg'
+import max24 from '../assets/max24.jpg'
+import castvote from '../assets/castvote.jpg'
+import guest1 from '../assets/westalents-guests/guest1.jpg'
+import guest2 from '../assets/westalents-guests/guest2.jpg'
+import guest3 from '../assets/westalents-guests/guest3.jpg'
+import guest4 from '../assets/westalents-guests/guest4.jpg'
 import winner1 from '../assets/westalents-winners/winner1.jpg'
 import winner2 from '../assets/westalents-winners/winner2.jpg'
 import winner3 from '../assets/westalents-winners/winner3.jpg'
@@ -24,7 +31,6 @@ import winner19 from '../assets/westalents-winners/winner19.jpg'
 import winner20 from '../assets/westalents-winners/winner20.jpg'
 import winner21 from '../assets/westalents-winners/winner21.jpg'
 import winner22 from '../assets/westalents-winners/winner22.jpg'
-import winner23 from '../assets/westalents-winners/winner23.jpg'
 
 
 
@@ -39,23 +45,23 @@ const EventDetail = () => {
   const eventsData = [
     {
       id: 1,
-      eventName: 'Past Event 1',
+      eventName: 'West African Talents And Entrepreneurs Awards',
       date: '2023-01-01',
       location: 'Past Event 1 Venue',
       description: 'This is the first past event.',
-      coverImage: 'past-event-1-cover.jpg',
+      coverImage: westalent,
       gallery: {
-        guestsOfHonor: ['guest1.jpg', 'guest2.jpg'],
+        guestsOfHonor: [guest1, guest2, guest3, guest4],
         winners: [winner1, winner2, winner3, winner4, winner5, winner6, winner7, winner8, winner9, winner10, winner11, winner12, winner13,
-            winner14, winner15, winner16, winner17, winner18, winner19, winner20, winner21, winner22, winner23
+            winner14, winner15, winner16, winner17, winner18, winner19, winner20, winner21, winner22
         ],
       },
-      mediaPartners: ['Media Partner 1', 'Media Partner 2'],
-      sponsors: ['Sponsor 1', 'Sponsor 2'],
+      mediaPartners: [max24],
+      sponsors: [castvote],
       socialMediaHandles: {
-        facebook: 'event1_facebook',
-        twitter: 'event1_twitter',
-        instagram: 'event1_instagram',
+        facebook: 'West African Talents And Entrepreneurs Awards',
+        twitter: 'WestTalentsCeos',
+        instagram: 'african_talents_entrepreneurs',
       },
     },
     {
@@ -116,9 +122,9 @@ const EventDetail = () => {
           {/* Guests of Honor */}
           <div>
             <h4 className="text-lg font-semibold mb-2">Guests of Honor</h4>
-            <div className="flex">
+            <div className="grid grid-cols-2 gap-2">
               {gallery.guestsOfHonor.map((image, index) => (
-                <img key={index} src={image} alt={`Guest of Honor ${index + 1}`} className="w-1/4 h-24 object-cover mr-2 rounded" />
+                <img key={index} src={image} alt={`Guest of Honor ${index + 1}`} className="object-cover mr-2 rounded" />
               ))}
             </div>
           </div>
@@ -137,27 +143,27 @@ const EventDetail = () => {
         {/* Media Partners */}
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Media Partners</h3>
-          <ul>
+          <div>
             {mediaPartners.map((partner, index) => (
-              <li key={index}>{partner}</li>
+              <img key={index} src={partner} />
             ))}
-          </ul>
+          </div>
         </div>
 
         {/* Sponsors */}
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Sponsors</h3>
-          <ul>
+          <div>
             {sponsors.map((sponsor, index) => (
-              <li key={index}>{sponsor}</li>
+              <img key={index} src={sponsor} />
             ))}
-          </ul>
+          </div>
         </div>
 
         {/* Social Media Handles */}
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Social Media Handles</h3>
-          <ul className="flex space-x-4">
+          <ul className="grid grid-rows-1">
             <li>
               <FontAwesomeIcon icon={faFacebook} size="2x" />
               <span className="ml-2">{socialMediaHandles.facebook}</span>
