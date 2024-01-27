@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useParams } from 'react-router-dom';
-import westalent from '../assets/westalent.jpg'
+import westalent from '../assets/daylight-bg2.mp4'
 import max24 from '../assets/max24.jpg'
 import castvote from '../assets/castvote.jpg'
 import guest1 from '../assets/westalents-guests/guest1.jpg'
@@ -31,6 +31,7 @@ import winner19 from '../assets/westalents-winners/winner19.jpg'
 import winner20 from '../assets/westalents-winners/winner20.jpg'
 import winner21 from '../assets/westalents-winners/winner21.jpg'
 import winner22 from '../assets/westalents-winners/winner22.jpg'
+import ReactPlayer from 'react-player';
 
 
 
@@ -109,7 +110,7 @@ const EventDetail = () => {
   return (
     <div className="container mx-auto mt-8 font-nunito">
       <div className="bg-gray-100 p-4 rounded">
-        <img src={coverImage} alt={eventName} className="w-full h-48 object-cover mb-4 rounded" />
+        <ReactPlayer url={coverImage} controls={true} className="w-full h-48 object-coverj mb-4 rounded" />
         <h2 className="text-3xl font-bold mb-2">{eventName}</h2>
         <p>Date: {date}</p>
         <p>Location: {location}</p>
