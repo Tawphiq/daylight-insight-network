@@ -110,7 +110,7 @@ const EventDetail = () => {
   return (
     <div className="container mx-auto mt-8 font-nunito">
       <div className="bg-gray-100 p-4 rounded">
-        <ReactPlayer url={coverImage} controls={true} className="w-full h-48 object-coverj mb-4 rounded" />
+        <ReactPlayer url={coverImage} controls={true} width="100%" aspect-ratio="16/9" className="w-full h-48 object-coverj mb-4 rounded" />
         <h2 className="text-3xl font-bold mb-2">{eventName}</h2>
         <p>Date: {date}</p>
         <p>Location: {location}</p>
