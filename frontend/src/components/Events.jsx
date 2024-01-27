@@ -19,8 +19,8 @@ const Events = () => {
     },
     {
       id: 2,
-      eventName: 'West African Photographers Awards and Honors',
-      date: '2024-12-31',
+      eventName: 'West African sports awards and honors',
+      date: '2023-08-20',
       location: 'Upcoming Event Venue',
       description: 'This is an upcoming event.',
       coverImage: wap,

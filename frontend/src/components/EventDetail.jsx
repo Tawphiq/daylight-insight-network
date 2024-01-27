@@ -32,6 +32,8 @@ import winner20 from '../assets/westalents-winners/winner20.jpg'
 import winner21 from '../assets/westalents-winners/winner21.jpg'
 import winner22 from '../assets/westalents-winners/winner22.jpg'
 import ReactPlayer from 'react-player';
+import wasacovervid from '../assets/wasacovervid.mp4';
+import wasahighlights from '../assets/wasahighlights.mp4';
 
 
 
@@ -50,7 +52,7 @@ const EventDetail = () => {
       date: '2023-01-01',
       location: 'Past Event 1 Venue',
       description: 'This is the first past event.',
-      coverImage: westalent,
+      coverVideo: westalent,
       gallery: {
         guestsOfHonor: [guest1, guest2, guest3, guest4],
         winners: [winner1, winner2, winner3, winner4, winner5, winner6, winner7, winner8, winner9, winner10, winner11, winner12, winner13,
@@ -67,22 +69,12 @@ const EventDetail = () => {
     },
     {
       id: 2,
-      eventName: 'Upcoming Event 1',
+      eventName: 'West African sports awards and honors',
       date: '2024-12-31',
-      location: 'Upcoming Event 1 Venue',
-      description: 'This is the first upcoming event.',
-      coverImage: 'upcoming-event-1-cover.jpg',
-      gallery: {
-        guestsOfHonor: ['guest3.jpg', 'guest4.jpg'],
-        winners: ['winner3.jpg', 'winner4.jpg'],
-      },
-      mediaPartners: ['Media Partner 3', 'Media Partner 4'],
-      sponsors: ['Sponsor 3', 'Sponsor 4'],
-      socialMediaHandles: {
-        facebook: 'event2_facebook',
-        twitter: 'event2_twitter',
-        instagram: 'event2_instagram',
-      },
+      location: 'AMA City Hall',
+      coverVideo: [wasacovervid],
+      //gallery: [],
+      highlights: [wasahighlights],
     },
     // Add more events as needed
   ];
@@ -100,17 +92,18 @@ const EventDetail = () => {
     date,
     location,
     description,
-    coverImage,
+    coverVideo,
     gallery,
     mediaPartners,
     sponsors,
     socialMediaHandles,
+    highlights,
   } = selectedEvent;
 
   return (
     <div className="container mx-auto mt-8 font-nunito">
       <div className="bg-gray-100 p-4 rounded">
-        <ReactPlayer url={coverImage} controls={true} width="100%" aspect-ratio="16/9" className="w-full h-48 object-coverj mb-4 rounded" />
+        <ReactPlayer url={coverVideo} controls={true} loop={true} width="100%" aspect-ratio="16/9" className="w-full h-48 object-coverj mb-4 rounded" />
         <h2 className="text-3xl font-bold mb-2">{eventName}</h2>
         <p>Date: {date}</p>
         <p>Location: {location}</p>
@@ -121,31 +114,40 @@ const EventDetail = () => {
           <h3 className="text-xl font-semibold mb-2">Event Gallery</h3>
 
           {/* Guests of Honor */}
-          <div>
+          {gallery && gallery.guestsOfHonor && <div>
             <h4 className="text-lg font-semibold mb-2">Guests of Honor</h4>
             <div className="grid grid-cols-2 gap-2">
-              {gallery.guestsOfHonor.map((image, index) => (
+              {gallery && gallery.guestsOfHonor && gallery.guestsOfHonor.map((image, index) => (
                 <img key={index} src={image} alt={`Guest of Honor ${index + 1}`} className="object-cover mr-2 rounded" />
               ))}
             </div>
-          </div>
+          </div>}
 
           {/* Winners */}
           <div className="mt-4">
             <h4 className="text-lg font-semibold mb-2">Winners</h4>
             <div className="grid grid-cols-2 gap-2">
-              {gallery.winners.map((image, index) => (
+              {gallery && gallery.winners && gallery.winners.map((image, index) => (
                 <img key={index} src={image} alt={`Winner ${index + 1}`} className="object-cover mr-2 rounded" />
               ))}
             </div>
           </div>
         </div>
 
+        <div>
+          <h1 className='text-3xl'>Event Highlights</h1>
+          <div>
+            {highlights && highlights.map((highlight, index) => (
+              <ReactPlayer key={index} url={highlight} controls={true} loop={true} width="100%" aspect-ratio="16/9" />
+            ))}
+          </div>
+            </div>
+
         {/* Media Partners */}
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Media Partners</h3>
           <div>
-            {mediaPartners.map((partner, index) => (
+            {mediaPartners && mediaPartners.map((partner, index) => (
               <img key={index} src={partner} />
             ))}
           </div>
@@ -155,14 +157,14 @@ const EventDetail = () => {
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Sponsors</h3>
           <div>
-            {sponsors.map((sponsor, index) => (
+            {sponsors && sponsors.map((sponsor, index) => (
               <img key={index} src={sponsor} />
             ))}
           </div>
         </div>
 
         {/* Social Media Handles */}
-        <div className="mt-6">
+        {socialMediaHandles && <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Social Media Handles</h3>
           <ul className="grid grid-rows-1">
             <li>
@@ -178,7 +180,7 @@ const EventDetail = () => {
               <span className="ml-2">{socialMediaHandles.instagram}</span>
             </li>
           </ul>
-        </div>
+        </div>}
       </div>
     </div>
   );
