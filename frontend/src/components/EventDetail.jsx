@@ -34,6 +34,24 @@ import winner22 from '../assets/westalents-winners/winner22.jpg'
 import ReactPlayer from 'react-player';
 import wasacovervid from '../assets/wasacovervid.mp4';
 import wasahighlights from '../assets/wasahighlights.mp4';
+import wasa1 from '../assets/wasa/wasa1.jpg';
+import wasa2 from '../assets/wasa/wasa2.jpg';
+import wasa3 from '../assets/wasa/wasa3.jpg';
+import wasa4 from '../assets/wasa/wasa4.jpg';
+import wasa5 from '../assets/wasa/wasa5.jpg';
+import wasa6 from '../assets/wasa/wasa6.jpg';
+import wasa7 from '../assets/wasa/wasa7.jpg';
+import wasa8 from '../assets/wasa/wasa8.jpg';
+import wasa9 from '../assets/wasa/wasa9.jpg';
+import wasa10 from '../assets/wasa/wasa10.jpg';
+import wasa11 from '../assets/wasa/wasa11.jpg';
+import wasa12 from '../assets/wasa/wasa12.jpg';
+import wasa13 from '../assets/wasa/wasa13.jpg';
+import wasa14 from '../assets/wasa/wasa14.jpg';
+import wasa15 from '../assets/wasa/wasa15.jpg';
+import wasa16 from '../assets/wasa/wasa16.jpg';
+import wasa17 from '../assets/wasa/wasa17.jpg';
+import wasa18 from '../assets/wasa/wasa18.jpg';
 
 
 
@@ -73,7 +91,7 @@ const EventDetail = () => {
       date: '2024-12-31',
       location: 'AMA City Hall',
       coverVideo: [wasacovervid],
-      //gallery: [],
+      eventGallery: [wasa1, wasa2, wasa3, wasa4, wasa5, wasa6, wasa7, wasa8, wasa9, wasa10, wasa11, wasa12, wasa13, wasa14, wasa15, wasa16, wasa17, wasa18],
       highlights: [wasahighlights],
     },
     // Add more events as needed
@@ -98,6 +116,7 @@ const EventDetail = () => {
     sponsors,
     socialMediaHandles,
     highlights,
+    eventGallery,
   } = selectedEvent;
 
   return (
@@ -112,6 +131,13 @@ const EventDetail = () => {
         {/* Event Gallery */}
         <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Event Gallery</h3>
+          <div className='grid grid-cols-2 gap-2'>
+            {eventGallery && eventGallery.map((img, index) => (
+              <img key={index} src={img} />
+            ))
+
+            }
+          </div>
 
           {/* Guests of Honor */}
           {gallery && gallery.guestsOfHonor && <div>
@@ -124,15 +150,15 @@ const EventDetail = () => {
           </div>}
 
           {/* Winners */}
-          <div className="mt-4">
+          {gallery && gallery.winners && <div className="mt-4">
             <h4 className="text-lg font-semibold mb-2">Winners</h4>
             <div className="grid grid-cols-2 gap-2">
               {gallery && gallery.winners && gallery.winners.map((image, index) => (
                 <img key={index} src={image} alt={`Winner ${index + 1}`} className="object-cover mr-2 rounded" />
               ))}
             </div>
+              </div>}
           </div>
-        </div>
 
         <div>
           <h1 className='text-3xl'>Event Highlights</h1>
@@ -144,24 +170,24 @@ const EventDetail = () => {
             </div>
 
         {/* Media Partners */}
-        <div className="mt-6">
+        {mediaPartners && <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Media Partners</h3>
           <div>
             {mediaPartners && mediaPartners.map((partner, index) => (
               <img key={index} src={partner} />
             ))}
           </div>
-        </div>
+        </div>}
 
         {/* Sponsors */}
-        <div className="mt-6">
+        {sponsors && <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Sponsors</h3>
           <div>
             {sponsors && sponsors.map((sponsor, index) => (
               <img key={index} src={sponsor} />
             ))}
           </div>
-        </div>
+        </div>}
 
         {/* Social Media Handles */}
         {socialMediaHandles && <div className="mt-6">
