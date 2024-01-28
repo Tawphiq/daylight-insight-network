@@ -16,7 +16,7 @@ const App = () => {
     <>
       <video
         className='absolute object-cover w-full min-h-screen -z-10 overflow-x-clip'
-        src={videobg} autoPlay loop muted />
+        src={videobg} autoPlay loop muted playsInline />
       <div className='backdrop-brightness-50g bg-amber-300/20g pt-5 min-h-screen'>
         <Router>
           <ScrollToTop />

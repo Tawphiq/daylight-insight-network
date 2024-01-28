@@ -161,8 +161,8 @@ const EventDetail = () => {
           </div>
 
         <div>
-          <h1 className='text-3xl'>Event Highlights</h1>
-          <div>
+          <h1 className='text-3xl mt-10'>Event Highlights</h1>
+          <div className='-mt-14'>
             {highlights && highlights.map((highlight, index) => (
               <ReactPlayer key={index} url={highlight} controls={true} loop={true} width="100%" aspect-ratio="16/9" />
             ))}

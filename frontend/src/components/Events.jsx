@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import westalent from '../assets/westalent.jpg'
-import wap from '../assets/wap-cover.jpg'
+import wasa from '../assets/hero-daylight.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -23,7 +23,7 @@ const Events = () => {
       date: '2023-08-20',
       location: 'Upcoming Event Venue',
       description: 'This is an upcoming event.',
-      coverImage: wap,
+      coverImage: wasa,
     },
     // Add more events as needed
   ]);
@@ -58,7 +58,7 @@ const Events = () => {
         {upcomingEvents.map((event) => (
           <Link key={event.id} to={`/events/${event.id}`} className="no-underline">
             <div data-aos="fade-up" className="bg-blue-100 p-4 mb-4 rounded cursor-pointer">
-              <img src={event.coverImage} alt={event.eventName} className="w-full h-48 object-cover mb-4 rounded" />
+              {event.coverImage && <img src={event.coverImage} alt={event.eventName} className="w-full h-48 object-cover mb-4 rounded" />}
               <h3 className="text-xl font-semibold mb-2">{event.eventName}</h3>
               <p>Date: {event.date}</p>
               <p>Location: {event.location}</p>
