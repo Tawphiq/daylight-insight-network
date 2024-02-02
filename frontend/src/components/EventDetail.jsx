@@ -94,6 +94,12 @@ const EventDetail = () => {
       eventGallery: [wasa1, wasa2, wasa3, wasa4, wasa5, wasa6, wasa7, wasa8, wasa9, wasa10, wasa11, wasa12, wasa13, wasa14, wasa15, wasa16, wasa17, wasa18],
       highlights: [wasahighlights],
     },
+
+    {
+      id: 3,
+      eventName:'West African Photographers Awards and Honors',
+      date: null,
+    }
     // Add more events as needed
   ];
 
