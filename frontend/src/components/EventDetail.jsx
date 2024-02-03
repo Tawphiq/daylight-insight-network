@@ -54,6 +54,9 @@ import wasa16 from '../assets/wasa/wasa16.jpg';
 import wasa17 from '../assets/wasa/wasa17.jpg';
 import wasa18 from '../assets/wasa/wasa18.jpg';
 import wap from '../assets/waphcover.jpg'
+import waphfiling from '../assets/waphfiling.jpg'
+import waphcategories from '../assets/waphcategories.jpg'
+import waphinstructions from '../assets/waphinstructions.jpg'
 
 
 
@@ -142,6 +145,7 @@ const EventDetail = () => {
         {eventName === 'West African Photographers Awards and Honors' && <div className='mt-10'>
           <div>
             <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase'>How to file for nominations</h3>
+            <img src={waphfiling} alt="" className='mt-2' />
             <p className='text-lg mt-2'>Send the listed details to our official whatsapp numbers (<span className='font-bold text-sky-400'>+233266862270 / +233533563345</span>)</p>
             <ul className='text-lg bullet-list mt-2'>
               <li>Name</li>
@@ -152,6 +156,7 @@ const EventDetail = () => {
             </ul>
           </div>
           <div className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Categories</div>
+          <img src={waphcategories} alt="" className='mt-2' />
           <ul className='text-lg bullet-list mt-2'>
             <li>West Africa Best Lifestyle Photographer of the year 23/24</li>
             <li>West Africa Best Product Photographer of the year 23/24</li>
@@ -173,6 +178,7 @@ const EventDetail = () => {
           </ul>
           <div>
             <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Criteria for Winners</h3>
+            <img src={waphinstructions} alt="" className='mt-2' />
             <ul className='text-lg bullet-list mt-2'>
             <li>Nominee must have 1000+ votes to win a category.</li><br />
             <li>First to Third of every category is claimed Winner and takes home a customized plaque, a Special Citation, a Certificate and a Medal.</li><br />
