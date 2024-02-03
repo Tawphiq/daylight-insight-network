@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import westalent from '../assets/westalent.jpg'
 import wasa from '../assets/hero-daylight.jpg'
-import wap from '../assets/wap-cover.jpg'
+import wap from '../assets/waphcover.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 

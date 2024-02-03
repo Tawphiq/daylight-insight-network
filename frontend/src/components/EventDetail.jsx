@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // EventDetail.js
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -52,6 +53,7 @@ import wasa15 from '../assets/wasa/wasa15.jpg';
 import wasa16 from '../assets/wasa/wasa16.jpg';
 import wasa17 from '../assets/wasa/wasa17.jpg';
 import wasa18 from '../assets/wasa/wasa18.jpg';
+import wap from '../assets/waphcover.jpg'
 
 
 
@@ -99,6 +101,7 @@ const EventDetail = () => {
       id: 3,
       eventName:'West African Photographers Awards and Honors',
       date: null,
+      coverImage: [wap]
     }
     // Add more events as needed
   ];
@@ -123,26 +126,70 @@ const EventDetail = () => {
     socialMediaHandles,
     highlights,
     eventGallery,
+    coverImage,
   } = selectedEvent;
 
   return (
     <div className="container mx-auto mt-8 font-nunito">
       <div className="bg-gray-100 p-4 rounded">
-        <ReactPlayer url={coverVideo} controls={true} loop={true} width="100%" aspect-ratio="16/9" className="w-full h-48 object-coverj mb-4 rounded" />
-        <h2 className="text-3xl font-bold mb-2">{eventName}</h2>
-        <p>Date: {date}</p>
-        <p>Location: {location}</p>
-        <p>Description: {description}</p>
+        {coverVideo && <ReactPlayer url={coverVideo} controls={true} loop={true} width="100%" aspect-ratio="16/9" className="w-full h-48 object-coverj mb-4 rounded" />}
+        {coverImage && <img src={wap} alt="" />}
+        <h2 className="text-xl font-bold mb-2 mt-4 uppercase">{eventName}</h2>
+        {date && <p>Date: {date}</p>}
+        {location && <p>Location: {location}</p>}
+        {description && <p>Description: {description}</p>}
+
+        {eventName === 'West African Photographers Awards and Honors' && <div className='mt-10'>
+          <div>
+            <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase'>How to file for nominations</h3>
+            <p className='text-lg mt-2'>Send the listed details to our official whatsapp numbers (<span className='font-bold text-sky-400'>+233266862270 / +233533563345</span>)</p>
+            <ul className='text-lg bullet-list mt-2'>
+              <li>Name</li>
+              <li>Category</li>
+              <li>Proof of work</li>
+              <li>Professional Pictures</li>
+              <li>Social Media Handles</li>
+            </ul>
+          </div>
+          <div className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Categories</div>
+          <ul className='text-lg bullet-list mt-2'>
+            <li>West Africa Best Lifestyle Photographer of the year 23/24</li>
+            <li>West Africa Best Product Photographer of the year 23/24</li>
+            <li>West Africa Best Event Photographer of the year 23/24</li>
+            <li>West Africa Best Promsing Photographer of the year 23/24</li>
+            <li>West Africa Best Creative Photographer of the year 23/24</li>
+            <li>West Africa Best Portrait Photographer of the year 23/24</li>
+            <li>West Africa Best Documentary Photographer of the year 23/24</li>
+            <li>West Africa Best New Photographer of the year 23/24</li>
+            <li>West Africa Best Fashion Photographer of the year 23/24</li>
+            <li>West Africa Best Wedding/Engagement Photographer of the year 23/24</li>
+            <li>West Africa Best Commercial Photographer of the year 23/24</li>
+            <li>West Africa Best Photo Retoucher of the year 23/24</li>
+            <li>West Africa Best Videographer of the year 23/24</li>
+            <li>West Africa Best Photog Editor of the year 23/24</li>
+            <li>West Africa Best Dramatic Photographer of the year 23/24</li>
+            <li>West Africa Best Phone Photographer of the year 23/24</li>
+            <li>West Africa Best Photographer of the year 23/24</li>
+          </ul>
+          <div>
+            <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Criteria for Winners</h3>
+            <ul className='text-lg bullet-list mt-2'>
+            <li>Nominee must have 1000+ votes to win a category.</li><br />
+            <li>First to Third of every category is claimed Winner and takes home a customized plaque, a Special Citation, a Certificate and a Medal.</li><br />
+            <li>Overall Winner (that's the Nominee with the highest number of votes in all) takes home a CASH PRIZE attached to the Category Prizes.</li><br />
+            <li>Digital Promotion :A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
+            <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
+            </ul>
+          </div>
+        </div>}
 
         {/* Event Gallery */}
-        <div className="mt-6">
+        {eventGallery && <div className="mt-6">
           <h3 className="text-xl font-semibold mb-2">Event Gallery</h3>
           <div className='grid grid-cols-2 gap-2'>
             {eventGallery && eventGallery.map((img, index) => (
               <img key={index} src={img} />
-            ))
-
-            }
+            ))}
           </div>
 
           {/* Guests of Honor */}
@@ -164,16 +211,16 @@ const EventDetail = () => {
               ))}
             </div>
               </div>}
-          </div>
+          </div>}
 
-        <div>
+        {highlights && <div>
           <h1 className='text-3xl mt-10'>Event Highlights</h1>
           <div className='-mt-14'>
             {highlights && highlights.map((highlight, index) => (
               <ReactPlayer key={index} url={highlight} controls={true} loop={true} width="100%" aspect-ratio="16/9" />
             ))}
           </div>
-            </div>
+            </div>}
 
         {/* Media Partners */}
         {mediaPartners && <div className="mt-6">
