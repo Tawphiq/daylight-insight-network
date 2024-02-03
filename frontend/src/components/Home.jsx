@@ -31,8 +31,8 @@ function Home() {
 
 
   return (
-        <>
-        <div className='text-white mt-20 mb-20 lg:mb-52 grid justify-start p-5 lg:justify-center lg:px-40 bg-white'>
+        <div className='bg-white'>
+        <div className='text-white mt-20 mb-20 lg:mb-52 grid justify-start p-5 lg:justify-center lg:px-40'>
           <h1 data-aos = 'fade-down' className=' text-4xl lg:text-5xl font-nunito font-extrabold lg:mt-0'>{typedText}</h1>
           <div className='grid mt-1 lg:mt-8'>
           <p data-aos = 'fade-left' className='text-lg lg:text-2xl'>Daylight Insights Network is all about shining a spotlight on great talents and brands in Africa and beyond.</p>
@@ -45,7 +45,7 @@ function Home() {
           <Services />
           <About />
           <Events />
-        </>
+        </div>
   )
 }
 
