@@ -104,7 +104,7 @@ const Navbar = () => {
             <NavLink to="/about" className="block text-white py-2">
               About
             </NavLink>
-            <NavLink to="/about" className="block text-white py-2">Events</NavLink>
+            <NavLink to="/events" className="block text-white py-2">Events</NavLink>
             <NavLink to="/services" className="block text-white py-2">
               Services
             </NavLink>
