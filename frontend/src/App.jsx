@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import videobg from './assets/daylight-bg3.mp4'
 import EventDetail from './components/EventDetail';
 import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -29,7 +30,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/events/:id" element={<EventDetail />} />
           </Routes>
-          
+          <Footer />
         </Router>
       </div>
     </>
