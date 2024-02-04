@@ -65,6 +65,10 @@ import waecover from '../assets/waecover.jpg'
 import waecategories from '../assets/waecategories.jpg'
 import waecriteria from '../assets/waecriteria.jpg'
 import waecoming from '../assets/waecoming.jpg'
+import wabcoming from '../assets/wabcoming.jpg'
+import wabfiling from '../assets/wabfiling.jpg'
+import wabcategories from '../assets/wabcategories.jpg'
+import wabcriteria from '../assets/wabcriteria.jpg'
 
 
 
@@ -127,6 +131,12 @@ const EventDetail = () => {
       eventName:'West Africa Event Planners Awards and Honors',
       date: null,
       coverImage: [waecover]
+    },
+    {
+      id: 6,
+      eventName: 'West Africa Beauticians Symposium Awards',
+      date: null,
+      coverImage: wabcoming
     }
   ];
 
@@ -272,9 +282,9 @@ const EventDetail = () => {
             <li>West Africa Best Event Planner of the Year 23/24</li>
             <li>West Africa Best Event Decorating Brand of the Year 23/24</li>
             <li>West Africa Best Event Local Bar of the Year ack 23/24</li>
-            <li>West Africa Best Event Catering Service of the Year Midfielder 23/24</li>
-            <li>West Africa Best Event Bakery of the Year Midfielder 23/24</li>
-            <li>West Africa Best Event Baloon of the Year Midfielder 23/24</li>
+            <li>West Africa Best Event Catering Service of the Year 23/24</li>
+            <li>West Africa Best Event Bakery of the Year 23/24</li>
+            <li>West Africa Best Event Baloon of the Year 23/24</li>
             <li>West Africa Best Event Florist of the Year 23/24</li>
             <li>West Africa Best Event BackDrop of the Year 23/24</li>
             <li>West Africa Best Event MC of the Year 23/24</li>
@@ -292,6 +302,52 @@ const EventDetail = () => {
             </ul>
           </div>
         </div>}
+
+        {eventName === 'West Africa Beauticians Symposium Awards' && <div>
+          <div>
+          <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase'>How to file for nominations</h3>
+            <img src={wabfiling} alt="" className='mt-2' />
+            <p className='text-lg mt-2'>Send the listed details to our official whatsapp numbers (<span className='font-bold text-amber-600'>+233266862270 / +233533563345</span>)</p>
+            <ul className='text-lg bullet-list mt-2'>
+              <li>Name</li>
+              <li>Category</li>
+              <li>Proof of work</li>
+              <li>Professional Pictures</li>
+              <li>Social Media Handles</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Categories</h3>
+            <img src={wabcategories} alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>West Africa Best Makeup Artist of the Year 23/24</li>
+            <li>West Africa Best Pro Makeup Artist of the Year 23/24</li>
+            <li>West Africa Best TV/Film Makeup Artist of the Year 23/24</li>
+            <li>West Africa Best Celebrity Makeup Artist of the Year 23/24</li>
+            <li>West Africa Best SFX Makeup Artist of the Year 23/24</li>
+            <li>West Africa Best Best International Makeup Artist of the Year 23/24</li>
+            <li>West Africa Best Recommended Salon of the Year 23/24</li>
+            <li>West Africa Best Salon Product of the Year 23/24</li>
+            <li>West Africa Best Salon of the Year 23/24</li>
+            <li>West Africa Best Beauty CEO of the Year 23/24</li>
+            <li>West Africa Best Organic Skincare Brand of the Year 23/24</li>
+            <li>West Africa Best Selling Skincare/Costmetic of the Year 23/24</li>
+          </ul>
+          </div>
+          <div>
+          <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Criteria for Winners</h3>
+            <img src={wabcriteria} alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>Nominee must have 1000+ votes to win a category.</li><br />
+            <li>First to Third of every category is claimed Winner and takes home a customized plaque, a Special Citation, a Certificate and a Medal.</li><br />
+            <li>Overall Winner (that's the Nominee with the highest number of votes in all) takes home a CASH PRIZE attached to the Category Prizes.</li><br />
+            <li>Digital Promotion :A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
+            <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
+            </ul>
+          </div>
+        </div>}
+
+        
 
 
         {/* Event Gallery */}
