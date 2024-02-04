@@ -57,6 +57,12 @@ import wap from '../assets/waphcover.jpg'
 import waphfiling from '../assets/waphfiling.jpg'
 import waphcategories from '../assets/waphcategories.jpg'
 import waphinstructions from '../assets/waphinstructions.jpg'
+import wasahcover from '../assets/wasahcover.jpg'
+import wasahcoming from '../assets/wasahcoming.jpg'
+import wasahcategories from '../assets/wasahcategories.jpg'
+import wasahcriteria from '../assets/wasahcriteria.jpg'
+
+
 
 
 
@@ -105,8 +111,13 @@ const EventDetail = () => {
       eventName:'West African Photographers Awards and Honors',
       date: null,
       coverImage: [wap]
+    },
+    {
+      id: 4,
+      eventName:'West Africa Sports Awards and Honors',
+      date: null,
+      coverImage: [wasahcover],
     }
-    // Add more events as needed
   ];
 
   // Find the selected event based on the id parameter
@@ -136,7 +147,7 @@ const EventDetail = () => {
     <div className="container mx-auto mt-8 font-nunito">
       <div className="bg-gray-100 p-4 rounded">
         {coverVideo && <ReactPlayer url={coverVideo} controls={true} loop={true} width="100%" aspect-ratio="16/9" className="w-full h-48 object-coverj mb-4 rounded" />}
-        {coverImage && <img src={wap} alt="" />}
+        {coverImage && <img src={coverImage} alt="" />}
         <h2 className="text-xl font-bold mb-2 mt-4 uppercase">{eventName}</h2>
         {date && <p>Date: {date}</p>}
         {location && <p>Location: {location}</p>}
@@ -189,9 +200,51 @@ const EventDetail = () => {
           </div>
         </div>}
 
+        {eventName === 'West Africa Sports Awards and Honors' && <div>
+          <div>
+          <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase'>How to file for nominations</h3>
+            <img src={wasahcoming} alt="" className='mt-2' />
+            <p className='text-lg mt-2'>Send the listed details to our official whatsapp numbers (<span className='font-bold text-green-400'>+233266862270 / +233533563345</span>)</p>
+            <ul className='text-lg bullet-list mt-2'>
+              <li>Name</li>
+              <li>Category</li>
+              <li>Proof of work</li>
+              <li>Professional Pictures</li>
+              <li>Social Media Handles</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Categories</h3>
+            <img src={wasahcategories} alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>West Africa Best Male/Female Center Back 23/24</li>
+            <li>West Africa Best Male/Female Left Back 23/24</li>
+            <li>West Africa Best Male/Female Right Back 23/24</li>
+            <li>West Africa Best Male/Female Defensive Midfielder 23/24</li>
+            <li>West Africa Best Male/Female Attacking Midfielder 23/24</li>
+            <li>West Africa Best Male/Female Holding Midfielder 23/24</li>
+            <li>West Africa Best Male/Female Left Winger 23/24</li>
+            <li>West Africa Best Male/Female Right Winger 23/24</li>
+            <li>West Africa Best Male/Female Striker 23/24</li>
+            <li>West Africa Best Male/Female GoalKeeper 23/24</li>
+          </ul>
+          </div>
+          <div>
+            <h3></h3>
+            <img src={wasahcriteria} alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>Nominee must have 1000+ votes to win a category.</li><br />
+            <li>First to Third of every category is claimed Winner and takes home a customized plaque, a Special Citation, a Certificate and a Medal.</li><br />
+            <li>Overall Winner (that's the Nominee with the highest number of votes in all) takes home a CASH PRIZE attached to the Category Prizes.</li><br />
+            <li>Digital Promotion :A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
+            <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
+            </ul>
+          </div>
+        </div>}
+
         {/* Event Gallery */}
-        {eventGallery && <div className="mt-6">
-          <h3 className="text-xl font-semibold mb-2">Event Gallery</h3>
+         <div className="mt-6">
+         {eventGallery && <h3 className="text-xl font-semibold mb-2">Event Gallery</h3>}
           <div className='grid grid-cols-2 gap-2'>
             {eventGallery && eventGallery.map((img, index) => (
               <img key={index} src={img} />
@@ -199,7 +252,7 @@ const EventDetail = () => {
           </div>
 
           {/* Guests of Honor */}
-          {gallery && gallery.guestsOfHonor && <div>
+          {gallery && <div>
             <h4 className="text-lg font-semibold mb-2">Guests of Honor</h4>
             <div className="grid grid-cols-2 gap-2">
               {gallery && gallery.guestsOfHonor && gallery.guestsOfHonor.map((image, index) => (
@@ -209,15 +262,15 @@ const EventDetail = () => {
           </div>}
 
           {/* Winners */}
-          {gallery && gallery.winners && <div className="mt-4">
-            <h4 className="text-lg font-semibold mb-2">Winners</h4>
+           <div className="mt-4">
+            {gallery && <h4 className="text-lg font-semibold mb-2">Winners</h4>}
             <div className="grid grid-cols-2 gap-2">
               {gallery && gallery.winners && gallery.winners.map((image, index) => (
                 <img key={index} src={image} alt={`Winner ${index + 1}`} className="object-cover mr-2 rounded" />
               ))}
             </div>
-              </div>}
-          </div>}
+              </div>
+          </div>
 
         {highlights && <div>
           <h1 className='text-3xl mt-10'>Event Highlights</h1>
