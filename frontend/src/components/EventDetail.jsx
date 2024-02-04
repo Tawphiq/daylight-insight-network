@@ -61,6 +61,10 @@ import wasahcover from '../assets/wasahcover.jpg'
 import wasahcoming from '../assets/wasahcoming.jpg'
 import wasahcategories from '../assets/wasahcategories.jpg'
 import wasahcriteria from '../assets/wasahcriteria.jpg'
+import waecover from '../assets/waecover.jpg'
+import waecategories from '../assets/waecategories.jpg'
+import waecriteria from '../assets/waecriteria.jpg'
+import waecoming from '../assets/waecoming.jpg'
 
 
 
@@ -117,6 +121,12 @@ const EventDetail = () => {
       eventName:'West Africa Sports Awards and Honors',
       date: null,
       coverImage: [wasahcover],
+    },
+    {
+      id: 5,
+      eventName:'West Africa Event Planners Awards and Honors',
+      date: null,
+      coverImage: [waecover]
     }
   ];
 
@@ -230,7 +240,7 @@ const EventDetail = () => {
           </ul>
           </div>
           <div>
-            <h3></h3>
+          <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Criteria for Winners</h3>
             <img src={wasahcriteria} alt="" className='mt-2' />
             <ul className='text-lg bullet-list mt-2'>
             <li>Nominee must have 1000+ votes to win a category.</li><br />
@@ -241,6 +251,48 @@ const EventDetail = () => {
             </ul>
           </div>
         </div>}
+
+        {eventName === 'West Africa Event Planners Awards and Honors' && <div>
+          <div>
+          <h3 className='bg-amber-600 text-white font-bold grid justify-center p-2 rounded-md uppercase'>How to file for nominations</h3>
+            <img src={waecoming} alt="" className='mt-2' />
+            <p className='text-lg mt-2'>Send the listed details to our official whatsapp numbers (<span className='font-bold text-amber-600'>+233266862270 / +233533563345</span>)</p>
+            <ul className='text-lg bullet-list mt-2'>
+              <li>Name</li>
+              <li>Category</li>
+              <li>Proof of work</li>
+              <li>Professional Pictures</li>
+              <li>Social Media Handles</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className='bg-amber-600 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Categories</h3>
+            <img src={waecategories} alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>West Africa Best Event Planner of the Year 23/24</li>
+            <li>West Africa Best Event Decorating Brand of the Year 23/24</li>
+            <li>West Africa Best Event Local Bar of the Year ack 23/24</li>
+            <li>West Africa Best Event Catering Service of the Year Midfielder 23/24</li>
+            <li>West Africa Best Event Bakery of the Year Midfielder 23/24</li>
+            <li>West Africa Best Event Baloon of the Year Midfielder 23/24</li>
+            <li>West Africa Best Event Florist of the Year 23/24</li>
+            <li>West Africa Best Event BackDrop of the Year 23/24</li>
+            <li>West Africa Best Event MC of the Year 23/24</li>
+          </ul>
+          </div>
+          <div>
+          <h3 className='bg-amber-600 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Criteria for Winners</h3>
+            <img src={waecriteria} alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>Nominee must have 1000+ votes to win a category.</li><br />
+            <li>First to Third of every category is claimed Winner and takes home a customized plaque, a Special Citation, a Certificate and a Medal.</li><br />
+            <li>Overall Winner (that's the Nominee with the highest number of votes in all) takes home a CASH PRIZE attached to the Category Prizes.</li><br />
+            <li>Digital Promotion :A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
+            <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
+            </ul>
+          </div>
+        </div>}
+
 
         {/* Event Gallery */}
          <div className="mt-6">
