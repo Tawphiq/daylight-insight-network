@@ -7,6 +7,7 @@ import wap from '../assets/waphcover.jpg'
 import wasahcover from '../assets/wasahcover.jpg'
 import waecover from '../assets/waecover.jpg'
 import wabcover from '../assets/wabcover.jpg'
+import wafcover from '../assets/wafcover.jpg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -53,6 +54,12 @@ const Events = () => {
       eventName: 'West Africa Beauticians Symposium Awards',
       date: null,
       coverImage: wabcover
+    },
+    {
+      id: 7,
+      eventName: 'West Africa Fashion Awards',
+      date: null,
+      coverImage: wafcover
     }
   ]);
 

@@ -69,6 +69,9 @@ import wabcoming from '../assets/wabcoming.jpg'
 import wabfiling from '../assets/wabfiling.jpg'
 import wabcategories from '../assets/wabcategories.jpg'
 import wabcriteria from '../assets/wabcriteria.jpg'
+import wafcomingvid from '../assets/wafcomingvid.mp4'
+import waffiling from '../assets/waffiling.jpg'
+
 
 
 
@@ -137,6 +140,12 @@ const EventDetail = () => {
       eventName: 'West Africa Beauticians Symposium Awards',
       date: null,
       coverImage: wabcoming
+    },
+    {
+      id: 7,
+      eventName: 'West Africa Fashion Awards',
+      date: null,
+      coverVideo: wafcomingvid
     }
   ];
 
@@ -256,7 +265,7 @@ const EventDetail = () => {
             <li>Nominee must have 1000+ votes to win a category.</li><br />
             <li>First to Third of every category is claimed Winner and takes home a customized plaque, a Special Citation, a Certificate and a Medal.</li><br />
             <li>Overall Winner (that's the Nominee with the highest number of votes in all) takes home a CASH PRIZE attached to the Category Prizes.</li><br />
-            <li>Digital Promotion :A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
+            <li>Digital Promotion: A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
             <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
             </ul>
           </div>
@@ -307,7 +316,7 @@ const EventDetail = () => {
           <div>
           <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase'>How to file for nominations</h3>
             <img src={wabfiling} alt="" className='mt-2' />
-            <p className='text-lg mt-2'>Send the listed details to our official whatsapp numbers (<span className='font-bold text-amber-600'>+233266862270 / +233533563345</span>)</p>
+            <p className='text-lg mt-2'>Send the listed details to our official whatsapp numbers (<span className='font-bold text-amber-400'>+233266862270 / +233533563345</span>)</p>
             <ul className='text-lg bullet-list mt-2'>
               <li>Name</li>
               <li>Category</li>
@@ -341,13 +350,40 @@ const EventDetail = () => {
             <li>Nominee must have 1000+ votes to win a category.</li><br />
             <li>First to Third of every category is claimed Winner and takes home a customized plaque, a Special Citation, a Certificate and a Medal.</li><br />
             <li>Overall Winner (that's the Nominee with the highest number of votes in all) takes home a CASH PRIZE attached to the Category Prizes.</li><br />
-            <li>Digital Promotion :A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
+            <li>Digital Promotion: A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
             <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
             </ul>
           </div>
         </div>}
 
-        
+        {eventName === 'West Africa Fashion Awards' && <div>
+          <div>
+          <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase'>How to file for nominations</h3>
+            <img src={waffiling} alt="" className='mt-2' />
+            <p className='text-lg mt-2'>Send the listed details to our official whatsapp numbers (<span className='font-bold text-green-400'>+233266862270 / +233533563345</span>)</p>
+            <ul className='text-lg bullet-list mt-2'>
+              <li>Name</li>
+              <li>Category</li>
+              <li>Proof of work</li>
+              <li>Professional Pictures</li>
+              <li>Social Media Handles</li>
+            </ul>
+          </div>
+          <div></div>
+          <div>
+          <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Criteria for Winners</h3>
+            <img src='' alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>Nominee must have 1000+ votes to win a category.</li><br />
+            <li>First to Third of every category is claimed Winner and takes home a customized plaque, a Special Citation, a Certificate and a Medal.</li><br />
+            <li>Overall Winner (that's the Nominee with the highest number of votes in all) takes home a CASH PRIZE attached to the Category Prizes.</li><br />
+            <li>Digital Promotion: A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
+            <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
+            </ul>
+          </div>
+          </div>}
+
+
 
 
         {/* Event Gallery */}
