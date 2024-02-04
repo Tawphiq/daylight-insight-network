@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 // eslint-disable-next-line no-unused-vars
 import React, {useState, useEffect} from 'react'
+import { NavLink } from 'react-router-dom'
 import Services from './Services'
 import About from './About'
 import Events from './Events'
@@ -37,8 +38,8 @@ function Home() {
           <div className='grid mt-1 lg:mt-8'>
           <p data-aos = 'fade-left' className='text-lg lg:text-2xl'>Daylight Insights Network is all about shining a spotlight on great talents and brands in Africa and beyond.</p>
           <div className='grid grid-cols-2 gap-5 lg:w-1/2 mt-5'>
-          <button className='bg-amber-400 p-4 text-xs lg:text-lg uppercase font-bold rounded-lg'>Explore our Events</button>
-          <button className='bg-sky-400 p-4 text-xs lg:text-lg uppercase font-bold rounded-lg'>About Us</button>
+          <NavLink to='/events' className='bg-amber-400 p-4 text-xs lg:text-lg uppercase font-bold rounded-lg'>Explore our Events</NavLink>
+          <NavLink className='bg-sky-400 p-4 text-xs lg:text-lg uppercase font-bold rounded-lg'>About Us</NavLink>
           </div>
           </div>
         </div>
