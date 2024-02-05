@@ -32,6 +32,8 @@ import winner19 from '../assets/westalents-winners/winner19.jpg'
 import winner20 from '../assets/westalents-winners/winner20.jpg'
 import winner21 from '../assets/westalents-winners/winner21.jpg'
 import winner22 from '../assets/westalents-winners/winner22.jpg'
+import wathighlights1 from '../assets/wathighlights1.mp4'
+import wathighlights2 from '../assets/wathighlights2.mp4'
 import ReactPlayer from 'react-player';
 import wasacovervid from '../assets/wasacovervid.mp4';
 import wasahighlights from '../assets/wasahighlights.mp4';
@@ -68,9 +70,11 @@ import waecoming from '../assets/waecoming.jpg'
 import wabcoming from '../assets/wabcoming.jpg'
 import wabfiling from '../assets/wabfiling.jpg'
 import wabcategories from '../assets/wabcategories.jpg'
+import wabcategory from '../assets/wabcategory.jpg'
 import wabcriteria from '../assets/wabcriteria.jpg'
 import wafcomingvid from '../assets/wafcomingvid.mp4'
 import waffiling from '../assets/waffiling.jpg'
+import wafcategories from '../assets/wafcategories.jpg'
 
 
 
@@ -93,6 +97,7 @@ const EventDetail = () => {
       location: 'Past Event 1 Venue',
       description: 'This is the first past event.',
       coverVideo: westalent,
+      highlights: [wathighlights1, wathighlights2],
       gallery: {
         guestsOfHonor: [guest1, guest2, guest3, guest4],
         winners: [winner1, winner2, winner3, winner4, winner5, winner6, winner7, winner8, winner9, winner10, winner11, winner12, winner13,
@@ -342,6 +347,22 @@ const EventDetail = () => {
             <li>West Africa Best Organic Skincare Brand of the Year 23/24</li>
             <li>West Africa Best Selling Skincare/Costmetic of the Year 23/24</li>
           </ul>
+          <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Hair Category</h3>
+            <img src={wabcategory} alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>West Africa Best Bridal Hairstyle of the Year 23/24</li>
+            <li>West Africa Best Hair Extension Brand of the Year 23/24</li>
+            <li>West Africa Best Braids Specialist of the Year 23/24</li>
+            <li>West Africa Best Wig Maker of the Year 23/24</li>
+            <li>West Africa Best Professional Hair Stylist of the Year 23/24</li>
+            <li>West Africa Best Male Hairdresser of the Year 23/24</li>
+            <li>West Africa Best TV/Film Hairdresser of the Year 23/24</li>
+            <li>West Africa Best Spa/Therapy Brand of the Year 23/24</li>
+            <li>West Africa Best Hair Colorist of the year 23/24</li>
+            <li>West Africa Best Nail Technician of the Year 23/24</li>
+            <li>West Africa Best Eyelash/Eyebrows Specialist of the Year 23/24</li>
+            <li>West Africa Best Dreadlocks Stylist of the Year 23/24</li>
+          </ul>
           </div>
           <div>
           <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Criteria for Winners</h3>
@@ -369,7 +390,27 @@ const EventDetail = () => {
               <li>Social Media Handles</li>
             </ul>
           </div>
-          <div></div>
+          <div>
+          <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Categories</h3>
+            <img src={wafcategories} alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>West Africa Best Male Fashion of the Year 23/24</li>
+            <li>West Africa Best Female Fashion of the Year 23/24</li>
+            <li>West Africa Best  Fashion of the Year 23/24</li>
+            <li>West Africa Best Luxury Fashion Store of the of the Year 23/24</li>
+            <li>West Africa Best Luxury Bride Costume Designer of the Year 23/24</li>
+            <li>West Africa Best Luxury Groom Costume Designer of the Year 23/24</li>
+            <li>West Africa Best Bridal/Groom Luxury store of the Year 23/24</li>
+            <li>West Africa Best Made Bridal Fan of the Year 23/24</li>
+            <li>West Africa Best Fashion Milliner of the year 23/24</li>
+            <li>West Africa Best Fashion Turban Doctor of the Year 23/24</li>
+            <li>West Africa Best Men Slippers/Shoe Brand of the Year 23/24</li>
+            <li>West Africa Best Women Slippers/Footwear Brand of the Year 23/24</li>
+            <li>West Africa Best Fashion Online Store of the Year 23/24</li>
+            <li>West Africa Best Non Affiliated Brands Store of the Year 23/24</li>
+            <li>West Africa Best Jewelry Accessories of the Year 23/24</li>
+          </ul>
+          </div>
           <div>
           <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Criteria for Winners</h3>
             <img src='' alt="" className='mt-2' />
