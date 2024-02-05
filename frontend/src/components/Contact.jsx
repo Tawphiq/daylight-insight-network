@@ -10,6 +10,7 @@ const Contact = () => {
         className="w-full h-80 object-cover mb-4"
       />
       <h2 className="text-2xl font-bold mb-2">Chief Executive Officer (CEO): MR. SAMUEL ADJEI</h2>
+      <div className='grid justify-start mr-20'>
       <div className="flex items-center mb-2">
         <FaEnvelope className="mr-2" />
         <p>daylightinsightsnetwork@gmail.com</p>
@@ -21,6 +22,7 @@ const Contact = () => {
       <div className="flex items-center mb-2 mr-40">
         <FaPhone className="mr-2" />
         <p>0550663208</p>
+      </div>
       </div>
     </div>
   );
