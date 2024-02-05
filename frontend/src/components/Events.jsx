@@ -77,7 +77,7 @@ const Events = () => {
         <h2 className="text-3xl font-bold mb-4 ml-4">Upcoming Events</h2>
         {upcomingEvents.map((event) => (
           <Link key={event.id} to={`/events/${event.id}`} className="no-underline">
-            <div data-aos="fade-up" className="bg-gray-100 p-4 mb-4 rounded cursor-pointer">
+            <div data-aos="fade-up" className="bg-blue-100 p-4 mb-4 rounded cursor-pointer">
               <img src={event.coverImage} alt={event.eventName} className="w-full h-48 object-cover mb-4 rounded" />
               <h3 className="text-xl font-semibold mb-2">{event.eventName}</h3>
               {events.date && <p>Date: {event.date}</p>}
@@ -92,7 +92,7 @@ const Events = () => {
         <h2 className="text-3xl font-bold mb-4 ml-4">Recent Events</h2>
         {pastEvents.map((event) => (
           <Link key={event.id} to={`/events/${event.id}`} className="no-underline">
-            <div data-aos="fade-up" className="bg-blue-100 p-4 mb-4 rounded cursor-pointer">
+            <div data-aos="fade-up" className="bg-gray-100 p-4 mb-4 rounded cursor-pointer">
               {event.coverImage && <img src={event.coverImage} alt={event.eventName} className="w-full h-48 object-cover mb-4 rounded" />}
               <h3 className="text-xl font-semibold mb-2">{event.eventName}</h3>
               {events.date && <p>Date: {event.date}</p>}

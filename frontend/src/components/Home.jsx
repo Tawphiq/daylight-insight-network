@@ -7,6 +7,7 @@ import About from './About'
 import Events from './Events'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Contact from './Contact'
 
 
 function Home() {
@@ -46,6 +47,7 @@ function Home() {
           <Services />
           <About />
           <Events />
+          <Contact />
         </>
   )
 }
