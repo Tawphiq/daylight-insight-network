@@ -7,7 +7,7 @@ const Contact = () => {
       <img
         src={ceo}
         alt="CEO's Picture"
-        className="w-full h-80 object-cover mb-4"
+        className="w-full h-full object-cover mb-4"
       />
       <h2 className="text-2xl font-bold mb-2">Chief Executive Officer (CEO): MR. SAMUEL ADJEI</h2>
       <div className='grid justify-start mr-20'>
