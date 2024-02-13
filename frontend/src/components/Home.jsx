@@ -8,6 +8,9 @@ import Events from './Events'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Contact from './Contact'
+import ReactPlayer from 'react-player';
+import pallazovid from '../assets/pallazovid.mp4';
+import latvid from '../assets/latvid.mp4';
 
 
 function Home() {
@@ -47,6 +50,16 @@ function Home() {
           <Services />
           <About />
           <Events />
+          <div>
+            <div>
+              <h3 className='p-4 mt-5 font-semibold text-lg'>Palazzo Salon Gh showing appreciation for being awarded and honored at West African Talents and Entrepreneurs Awards night </h3>
+              <ReactPlayer url={pallazovid} controls={true} loop={false} width="100%" aspect-ratio="16/9" className="w-full h-48 mb-4 rounded" />
+            </div>
+            <div>
+            <h3 className='p-4 mt-5 font-semibold text-lg'>Congratulations to  @latifaadekanla ! 🎉 Celebrating their incredible talent and well-deserved victory!”</h3>
+              <ReactPlayer url={latvid} controls={true} loop={false} width="100%" aspect-ratio="16/9" className="w-full h-48 mb-4 rounded" />
+            </div>
+          </div>
           <Contact />
         </>
   )
