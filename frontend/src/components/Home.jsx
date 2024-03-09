@@ -43,15 +43,15 @@ function Home() {
           <div className='grid mt-1 lg:mt-8'>
           <p data-aos = 'fade-left' className='text-lg lg:text-2xl'>Daylight Insights Network is all about shining a spotlight on great talents and brands in Africa and beyond.</p>
           <div className='grid grid-cols-2 gap-5 lg:w-1/2 mt-5'>
-          <NavLink to='/events' className='bg-amber-400 p-4 text-xs lg:text-lg uppercase font-bold rounded-lg'>Explore our Events</NavLink>
-          <NavLink className='bg-sky-400 p-4 text-xs lg:text-lg uppercase font-bold rounded-lg'>About Us</NavLink>
+          <NavLink to='/events' className='bg-amber-400 p-4 text-xs lg:text-md md:text-center uppercase font-bold rounded-lg'>Explore our Events</NavLink>
+          <NavLink className='bg-sky-400 p-4 text-xs lg:text-md md:text-center uppercase font-bold rounded-lg'>About Us</NavLink>
           </div>
           </div>
         </div>
           <Services />
           <About />
           <Events />
-          <div>
+          <div className='md:grid md:grid-cols-2 md:gap-4 md:px-20'>
             <div>
               <h3 className='p-4 mt-5 font-semibold text-lg'>Palazzo Salon Gh showing appreciation for being awarded and honored at West African Talents and Entrepreneurs Awards night </h3>
               <ReactPlayer url={pallazovid} controls={true} loop={false} width="100%" aspect-ratio="16/9" className="w-full h-48 mb-4 rounded" />

@@ -73,8 +73,8 @@ const Events = () => {
 
   return (
     <div className="container mx-auto mt-8 font-nunito">
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold mb-4 ml-4">Upcoming Events</h2>
+      <h2 className="text-3xl font-bold mb-4 ml-4">Upcoming Events</h2>
+      <div className="mb-8 md:grid md:grid-cols-2 md:gap-4">
         {upcomingEvents.map((event) => (
           <Link key={event.id} to={`/events/${event.id}`} className="no-underline">
             <div data-aos="fade-up" className="bg-blue-100 p-4 mb-4 rounded cursor-pointer">
@@ -88,8 +88,10 @@ const Events = () => {
         ))}
       </div>
 
-      {pastEvents && <div>
+      {pastEvents &&
+        <div>
         <h2 className="text-3xl font-bold mb-4 ml-4">Recent Events</h2>
+       <div className='md:grid md:grid-cols-2 md:gap-4'>
         {pastEvents.map((event) => (
           <Link key={event.id} to={`/events/${event.id}`} className="no-underline">
             <div data-aos="fade-up" className="bg-gray-100 p-4 mb-4 rounded cursor-pointer">
@@ -101,6 +103,7 @@ const Events = () => {
             </div>
           </Link>
         ))}
+        </div>
       </div>}
     </div>
   );

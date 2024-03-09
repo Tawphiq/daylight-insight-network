@@ -11,12 +11,12 @@ function About() {
 
 
   return (
-    <div className="lg:grid lg:grid-cols-2 bg-sky-400 text-white p-10 lg:px-40 font-nunito text-lg">
+    <div className="md:grid md:grid-cols-2 md:gap-8 bg-sky-400 text-white p-10 md:px-40 font-nunito text-lg">
       <div className='grid grid-cols-2 gap-2'>
       <img data-aos="flip-right" src={about1} alt="" className='rounded-lg' />
       <img data-aos="flip-left" src={about} alt="" className='mt-28 mb-5 rounded-lg' />
       </div>
-      <div data-aos="fade-left" className=''>
+      <div data-aos="fade-left" className='mt-24'>
       <h1 className="text-4xl lg:6xl font-bold">About Us</h1>
       <p>
         Daylight Insight's Network is a vibrant community dedicated to illuminating the brilliance of extraordinary talents and remarkable brands, not only in Africa but also across the global stage.
