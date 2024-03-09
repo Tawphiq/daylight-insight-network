@@ -3,7 +3,7 @@ import ceo from '../assets/daylightceo.jpg';
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center justify-center p-8 bg-blue-100 mb-10 md:grid md:grid-cols-2 w-5/6 md:ml-24 md:gap-5">
+    <div className="flex flex-col items-center justify-center p-8 bg-blue-100 mb-10 md:grid md:grid-cols-2 md:w-5/6 md:ml-24 md:gap-5">
       <img
         src={ceo}
         alt="CEO's Picture"
