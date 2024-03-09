@@ -57,6 +57,9 @@ const Navbar = () => {
           <NavLink to="/services" className="text-white hover:text-gray-300">
             Services
           </NavLink>
+          <NavLink to="/recipients" className="text-white hover:text-gray-300">
+            Award Receipients
+          </NavLink>
           <NavLink to="/contact" className="text-white hover:text-gray-300">
             Contact
           </NavLink>
@@ -107,6 +110,9 @@ const Navbar = () => {
             <NavLink to="/events" className="block text-white py-2">Events</NavLink>
             <NavLink to="/services" className="block text-white py-2">
               Services
+            </NavLink>
+            <NavLink to="/recipients" className="block text-white py-2">
+              Award Receipients
             </NavLink>
             <NavLink to="/contact" className="block text-white py-2">
               Contact
