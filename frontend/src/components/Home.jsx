@@ -37,7 +37,7 @@ function Home() {
 
   return (
         <>
-        <video className='absolute object-cover w-full min-h-screenh h-4/5 -z-10 overflow-x-clip' src={videobg} autoPlay loop muted playsInline />
+        <video className='absolute object-cover w-full md:min-h-screen h-4/5 -z-10 overflow-x-clip' src={videobg} autoPlay loop muted playsInline />
         <Navbar />
         <div className='text-white mt-20 mb-20 lg:mb-52 grid justify-start p-5 lg:justify-center lg:px-40'>
           <h1 data-aos = 'fade-down' className=' text-4xl lg:text-5xl font-nunito font-extrabold lg:mt-0'>{typedText}</h1>
