@@ -75,6 +75,15 @@ import wabcriteria from '../assets/wabcriteria.jpg'
 import wafcomingvid from '../assets/wafcomingvid.mp4'
 import waffiling from '../assets/waffiling.jpg'
 import wafcategories from '../assets/wafcategories.jpg'
+import spg1 from '../assets/spg1.jpg'
+import spg2 from '../assets/spg2.jpg'
+import spg3 from '../assets/spg3.jpg'
+import spg4 from '../assets/spg4.jpg'
+import hap1 from '../assets/hap1.jpg'
+import hap2 from '../assets/hap2.jpg'
+import perf1 from '../assets/perf1.jpg'
+import perf2 from '../assets/perf2.jpg'
+
 
 
 
@@ -274,6 +283,25 @@ const EventDetail = () => {
             <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
             </ul>
           </div>
+          <div>
+            <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10 mb-2'>Happening Live</h3>
+            <div className='grid gap-2'>
+              <img src={hap1} alt="" />
+              <img src={hap2} alt="" />
+            </div>
+            <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10 mb-2'>Special Guests</h3>
+            <div className='grid gap-2'>
+              <img src={spg1} alt="" />
+              <img src={spg2} alt="" />
+              <img src={spg3} alt="" />
+              <img src={spg4} alt="" />
+            </div>
+            <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10 mb-2'>Performances</h3>
+            <div className='grid gap-2'>
+              <img src={perf1} alt="" />
+              <img src={perf2} alt="" />
+            </div>
+          </div>
         </div>}
 
         {eventName === 'West Africa Event Planners Awards and Honors' && <div>
@@ -375,6 +403,36 @@ const EventDetail = () => {
             <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
             </ul>
           </div>
+          <div>
+          <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Criteria for Winners</h3>
+            <img src={wasahcriteria} alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>Nominee must have 1000+ votes to win a category.</li><br />
+            <li>First to Third of every category is claimed Winner and takes home a customized plaque, a Special Citation, a Certificate and a Medal.</li><br />
+            <li>Overall Winner (that's the Nominee with the highest number of votes in all) takes home a CASH PRIZE attached to the Category Prizes.</li><br />
+            <li>Digital Promotion: A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
+            <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10 mb-2'>Happening Live</h3>
+            <div className='grid gap-2'>
+              <img src={hap1} alt="" />
+              <img src={hap2} alt="" />
+            </div>
+            <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10 mb-2'>Special Guests</h3>
+            <div className='grid gap-2'>
+              <img src={spg1} alt="" />
+              <img src={spg2} alt="" />
+              <img src={spg3} alt="" />
+              <img src={spg4} alt="" />
+            </div>
+            <h3 className='bg-amber-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10 mb-2'>Performances</h3>
+            <div className='grid gap-2'>
+              <img src={perf1} alt="" />
+              <img src={perf2} alt="" />
+            </div>
+          </div>
         </div>}
 
         {eventName === 'West Africa Fashion Awards' && <div>
@@ -421,6 +479,36 @@ const EventDetail = () => {
             <li>Digital Promotion: A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
             <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
             </ul>
+          </div>
+          <div>
+          <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10'>Criteria for Winners</h3>
+            <img src={wasahcriteria} alt="" className='mt-2' />
+            <ul className='text-lg bullet-list mt-2'>
+            <li>Nominee must have 1000+ votes to win a category.</li><br />
+            <li>First to Third of every category is claimed Winner and takes home a customized plaque, a Special Citation, a Certificate and a Medal.</li><br />
+            <li>Overall Winner (that's the Nominee with the highest number of votes in all) takes home a CASH PRIZE attached to the Category Prizes.</li><br />
+            <li>Digital Promotion: A live interview with a media company will be arranged for the Overall winner (thats the Nominee who wins the OVERALL CASH PRIZE through out the event).</li><br />
+            <li>Nominees that reach 2000+ votes but do not win their category gain a Special Citation a Customized Plaque, a Certificate and a Medal.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10 mb-2'>Happening Live</h3>
+            <div className='grid gap-2'>
+              <img src={hap1} alt="" />
+              <img src={hap2} alt="" />
+            </div>
+            <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10 mb-2'>Special Guests</h3>
+            <div className='grid gap-2'>
+              <img src={spg1} alt="" />
+              <img src={spg2} alt="" />
+              <img src={spg3} alt="" />
+              <img src={spg4} alt="" />
+            </div>
+            <h3 className='bg-green-400 text-white font-bold grid justify-center p-2 rounded-md uppercase mt-10 mb-2'>Performances</h3>
+            <div className='grid gap-2'>
+              <img src={perf1} alt="" />
+              <img src={perf2} alt="" />
+            </div>
           </div>
           </div>}
 
